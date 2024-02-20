@@ -1,26 +1,55 @@
 /* STYLE SETUP */
-
 *{
-
+    box-sizing: border-box;
+    margin: 0px;
 }
 
 html{
 
 }
 
-:root{
-
+@font-face {
+    font-family: 'Figtree-Italic-VariableFont_wght';
+    src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: 'Figtree-VariableFont_wght';
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+:root{
+    --default-italic-font: 'Figtree-Italic-VariableFont_wght';
+    --default-font: 'Figtree-VariableFont_wght';
+    --black: hsl(0, 0%, 7%);
+    --pure-white: hsl(0, 0%, 100%);
+    --yellow: hsl(47, 88%, 63%);
+    --grey: hsl(0, 0%, 50%);
+}
+
+
 /* MAIN CONTENT */
-
-
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow);
+}
 .content{
-
+    font-family: var(--default-font);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 375px;
+    background-color: var(--pure-white);
+    padding: 1.5rem;
+    border-radius: .7rem;
 }
 
 img{
-
+    border-radius: .7rem;
 }
 
 img.blogThumbnail{
@@ -41,6 +70,16 @@ h1.blogTitle{
 
 p.blogDescription{
 
+}
+
+.author{
+    display: flex;
+    align-items: center;
+}
+
+img.authorPicture{
+    width: 30px;
+    margin-inline-end: 15px;
 }
 
 h4.blogAuthor{

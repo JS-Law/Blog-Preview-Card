@@ -4,10 +4,6 @@
     margin: 0px;
 }
 
-html{
-
-}
-
 @font-face {
     font-family: 'Figtree-Italic-VariableFont_wght';
     src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
@@ -41,35 +37,60 @@ html{
     font-family: var(--default-font);
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    width: 375px;
+    width: 327px;
+    height: 501px;
     background-color: var(--pure-white);
-    padding: 1.5rem;
-    border-radius: .7rem;
+    border: solid 1px;
+    border-radius: 20px;
+    padding-left: 24px;
 }
 
 img{
-    border-radius: .7rem;
+
 }
 
 img.blogThumbnail{
-
+    margin-top: 24px;
+    height: 200px;
+    width: 279px;
+    border-radius: 10px;
+    object-fit: cover; 
+    object-position: center;
 }
 
 h3.blogCategory{
-
+    background-color: var(--yellow);
+    font-size: 12px;
+    border-radius: .3rem;
+    font-weight: 700;
+    padding-block: 6px;
+    width: 73px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 12px;
 }
 
 h2.publishDate{
-
+    margin-bottom: 12px;
+    height: 18px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 h1.blogTitle{
-
+    margin-bottom: 12px;
+    font-size: 20px;
+    height: 30px;
+    font-weight: 800;
 }
 
 p.blogDescription{
-
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grey);
+    height: 63px;
+    line-height: 150%;
 }
 
 .author{
@@ -83,7 +104,65 @@ img.authorPicture{
 }
 
 h4.blogAuthor{
-
+    font-size: 14px;
 }
 
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+a:hover{
+    color: var(--grey);
+}
+
+a.link{
+    color: var(--black);
+    text-decoration: none;
+}
+
+a.link:hover{
+    color: var(--yellow);
+}
+
+.attribution{
+    font-family: var(--default-font);
+    font-size: 12px;
+    position: absolute;
+    top: 1;
+    bottom: 5px;
+}
+
+
 /* MEDIA QUERIES */
+
+@media (min-width: 401px) {
+    .content{
+        width: 384px;
+        height: 522px;
+    }
+    img.blogThumbnail{
+        width: auto;
+    }
+    p.blogDescription{
+        font-size: 16px;
+    }
+    h1.blogTitle{
+        font-size: 24px;
+    }
+    h2.publishDate{
+        font-size: 14px;
+    }
+    h3.blogCategory{
+        font-size: 14px;
+    }
+    .author{
+        margin-top: 14px;
+    }
+    .attribution{
+        position: absolute;
+        top: 1;
+        bottom: 5px;
+        font-size: 13px;
+    }
+}
